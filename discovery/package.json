@@ -1,0 +1,23 @@
+{
+  "name": "@interface-takehome/discovery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LLM-driven observe-decide-act loop that discovers a UI flow and records it as an Artifact",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "discover": "ts-node src/cli.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@interface-takehome/shared": "file:../shared",
+    "dotenv": "^16.4.5",
+    "playwright": "1.47.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
+}

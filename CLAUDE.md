@@ -18,3 +18,4 @@ Mock bank app = Express + EJS, server-rendered, intentionally hostile markup.
 
 ## Decisions log
 - TypeScript chosen over Go for browser ecosystem (Playwright). Artifact is language-neutral JSON.
+- Discovery LLM: gemini-3.1-flash-lite (gemini-3.1-pro returned 404/no-quota on this key)

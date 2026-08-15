@@ -1,0 +1,163 @@
+{
+  "name": "look-up-member-12345-and-read-their-savings-balance",
+  "description": "look up member 12345 and read their savings balance",
+  "version": "1.0.0",
+  "target": {
+    "app": "mock-bank",
+    "baseUrl": "http://localhost:3000",
+    "tenant": "default"
+  },
+  "parameters": [
+    {
+      "name": "username",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savingsBalance",
+      "type": "string"
+    }
+  ],
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000"
+    },
+    {
+      "action": "type",
+      "locator": {
+        "strategies": [
+          {
+            "by": "label",
+            "text": "Username"
+          },
+          {
+            "by": "xpath",
+            "value": "//*[@id=\"f1\"]"
+          }
+        ]
+      },
+      "param": "username"
+    },
+    {
+      "action": "type",
+      "locator": {
+        "strategies": [
+          {
+            "by": "label",
+            "text": "Password"
+          },
+          {
+            "by": "xpath",
+            "value": "//*[@id=\"f2\"]"
+          }
+        ]
+      },
+      "param": "password"
+    },
+    {
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "by": "role",
+            "role": "button",
+            "name": "Login"
+          },
+          {
+            "by": "xpath",
+            "value": "/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[3]/td[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/button[1]"
+          }
+        ]
+      }
+    },
+    {
+      "action": "type",
+      "locator": {
+        "strategies": [
+          {
+            "by": "label",
+            "text": "Member ID"
+          },
+          {
+            "by": "xpath",
+            "value": "//*[@id=\"f1\"]"
+          }
+        ]
+      },
+      "param": "memberId"
+    },
+    {
+      "action": "click",
+      "locator": {
+        "strategies": [
+          {
+            "by": "role",
+            "role": "button",
+            "name": "Search"
+          },
+          {
+            "by": "xpath",
+            "value": "/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/button[1]"
+          }
+        ]
+      }
+    },
+    {
+      "action": "extract",
+      "locator": {
+        "strategies": [
+          {
+            "by": "label",
+            "text": "Savings Balance"
+          },
+          {
+            "by": "xpath",
+            "value": "/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/label[1]"
+          }
+        ]
+      },
+      "output": "savingsBalance"
+    }
+  ],
+  "knownOutcomes": [
+    {
+      "name": "MEMBER_NOT_FOUND",
+      "match": "Record not found",
+      "kind": "business_outcome"
+    },
+    {
+      "name": "SESSION_EXPIRED",
+      "match": "Session expired, please login again",
+      "kind": "recoverable",
+      "action": "relogin"
+    },
+    {
+      "name": "PERMISSION_DENIED",
+      "match": "You are not authorized",
+      "kind": "business_outcome"
+    },
+    {
+      "name": "INVALID_CREDENTIALS",
+      "match": "Invalid username or password",
+      "kind": "recoverable",
+      "action": "retry"
+    }
+  ],
+  "successCheckpoint": {
+    "type": "textPresent",
+    "value": "$4,200.00"
+  }
+}
