@@ -1,0 +1,47 @@
+<table class="wrap" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="td1">
+      <div class="box">
+        <div class="hdr">
+          <table cellpadding="0" cellspacing="0">
+            <tr><td class="cell">Member Bank &mdash; Back Office</td></tr>
+          </table>
+        </div>
+        <div class="body">
+          <% if (error) { %>
+            <div class="row"><span class="c2"><%= error %></span></div>
+          <% } %>
+          <form method="POST" action="/login">
+            <table cellpadding="0" cellspacing="0">
+              <tr class="row">
+                <td class="cell">
+                  <label for="f1">Username</label>
+                </td>
+                <td class="cell">
+                  <input type="text" id="f1" name="username" />
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell">
+                  <label for="f2">Password</label>
+                </td>
+                <td class="cell">
+                  <input type="password" id="f2" name="password" />
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell" colspan="2">
+                  <div class="btnwrap">
+                    <table cellpadding="0" cellspacing="0">
+                      <tr><td class="td1"><button type="submit">Login</button></td></tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>

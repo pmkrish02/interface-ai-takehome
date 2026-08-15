@@ -1,0 +1,53 @@
+<table class="wrap" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="td1">
+      <div class="box">
+        <div class="hdr">
+          <table cellpadding="0" cellspacing="0">
+            <tr><td class="cell">Open Sub-Account &mdash; <%= member.name %></td></tr>
+          </table>
+        </div>
+        <div class="body">
+          <form method="POST" action="/member/<%= member.id %>/sub-account">
+            <table cellpadding="0" cellspacing="0">
+              <tr class="row">
+                <td class="cell">
+                  <label for="f1">Sub-Account Type</label>
+                </td>
+                <td class="cell">
+                  <select id="f1" name="subAccountType">
+                    <option value="christmas_club">Christmas Club</option>
+                    <option value="vacation_club">Vacation Club</option>
+                    <option value="second_savings">Second Savings</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell">
+                  <label for="f2">Opening Deposit</label>
+                </td>
+                <td class="cell">
+                  <input type="text" id="f2" name="openingDeposit" />
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell" colspan="2">
+                  <div class="btnwrap">
+                    <table cellpadding="0" cellspacing="0">
+                      <tr><td class="td1"><button type="submit">Continue</button></td></tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+          <div class="row">
+            <table cellpadding="0" cellspacing="0">
+              <tr><td class="td1"><a href="/member/<%= member.id %>">Back to Member</a></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,46 @@
+<table class="wrap" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="td1">
+      <div class="box">
+        <div class="hdr">
+          <table cellpadding="0" cellspacing="0">
+            <tr><td class="cell">Member Search</td></tr>
+          </table>
+        </div>
+        <div class="body">
+          <% if (error === "not_found") { %>
+            <div class="row"><span class="c2">Record not found</span></div>
+          <% } else if (error === "timeout") { %>
+            <div class="row"><span class="c2">Session expired, please login again</span></div>
+          <% } %>
+          <form method="POST" action="/search">
+            <table cellpadding="0" cellspacing="0">
+              <tr class="row">
+                <td class="cell">
+                  <label for="f1">Member ID</label>
+                </td>
+                <td class="cell">
+                  <input type="text" id="f1" name="memberId" />
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell" colspan="2">
+                  <div class="btnwrap">
+                    <table cellpadding="0" cellspacing="0">
+                      <tr><td class="td1"><button type="submit">Search</button></td></tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+          <div class="row">
+            <form method="POST" action="/logout">
+              <button type="submit">Logout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
