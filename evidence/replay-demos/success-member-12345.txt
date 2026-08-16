@@ -1,0 +1,11 @@
+
+> @interface-takehome/replay@1.0.0 replay
+> ts-node src/cli.ts --artifact ../evidence/artifacts/look-up-member-12345-and-read-their-savings-balance.json --params {"username":"admin","password":"password123","memberId":"12345"} --headless true
+
+Replaying: look-up-member-12345-and-read-their-savings-balance (/Users/muralikrishnaprodduturi/interface-takehome/evidence/artifacts/look-up-member-12345-and-read-their-savings-balance.json)
+Target: http://localhost:3000 (tenant: default)
+
+Result: success
+Outputs: {
+  "savingsBalance": "$4,200.00"
+}

@@ -70,6 +70,8 @@ function isStep(x) {
         return false;
     if (s.checkpoint !== undefined && !isCheckpoint(s.checkpoint))
         return false;
+    if (s.risky !== undefined && !isBoolean(s.risky))
+        return false;
     return true;
 }
 function isParameter(x) {

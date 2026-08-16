@@ -33,6 +33,7 @@ export interface Step {
     param?: string;
     output?: string;
     checkpoint?: Checkpoint;
+    risky?: boolean;
 }
 export type PrimitiveType = "string" | "number";
 export interface Parameter {

@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-16T01:20:18.563Z",
+  "artifact": "look-up-member-12345-and-read-their-savings-balance",
+  "target": {
+    "app": "mock-bank",
+    "baseUrl": "http://localhost:3000",
+    "tenant": "default"
+  },
+  "paramsUsed": {
+    "username": "admin",
+    "password": "[REDACTED]",
+    "memberId": "99999"
+  },
+  "status": "business_outcome",
+  "result": {
+    "status": "business_outcome",
+    "outcome": "MEMBER_NOT_FOUND"
+  },
+  "durationMs": 7006,
+  "log": "/Users/muralikrishnaprodduturi/interface-takehome/evidence/replays/2026-08-16T01-20-11-556Z.jsonl"
+}

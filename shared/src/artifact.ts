@@ -43,6 +43,7 @@ export interface Step {
   param?: string; // for type — references a parameter name
   output?: string; // for extract — names the result
   checkpoint?: Checkpoint; // post-condition proving the step worked
+  risky?: boolean; // replay must pause for human confirmation before this step
 }
 
 // ---------------------------------------------------------------------------
@@ -184,6 +185,7 @@ function isStep(x: unknown): x is Step {
   if (s.param !== undefined && !isString(s.param)) return false;
   if (s.output !== undefined && !isString(s.output)) return false;
   if (s.checkpoint !== undefined && !isCheckpoint(s.checkpoint)) return false;
+  if (s.risky !== undefined && !isBoolean(s.risky)) return false;
   return true;
 }
 

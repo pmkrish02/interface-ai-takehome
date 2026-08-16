@@ -1,0 +1,12 @@
+{"stepIndex":0,"action":"navigate","execSuccess":true,"timestampMs":1786843213267}
+{"stepIndex":0,"action":"navigate","note":"classification","classification":"unclassified","timestampMs":1786843213296}
+{"stepIndex":1,"action":"type","paramRef":"username","tier":"label","execSuccess":true,"timestampMs":1786843214304}
+{"stepIndex":1,"action":"type","note":"classification","classification":"unclassified","timestampMs":1786843214311}
+{"stepIndex":2,"action":"type","paramRef":"password","tier":"label","execSuccess":true,"timestampMs":1786843215353}
+{"stepIndex":2,"action":"type","note":"classification","classification":"unclassified","timestampMs":1786843215360}
+{"stepIndex":3,"action":"click","tier":"role","execSuccess":true,"timestampMs":1786843216409}
+{"stepIndex":3,"action":"click","note":"classification","classification":"unclassified","timestampMs":1786843216425}
+{"stepIndex":4,"action":"type","paramRef":"memberId","tier":"label","execSuccess":true,"timestampMs":1786843217433}
+{"stepIndex":4,"action":"type","note":"classification","classification":"unclassified","timestampMs":1786843217439}
+{"stepIndex":5,"action":"click","tier":"role","execSuccess":true,"timestampMs":1786843218488}
+{"stepIndex":5,"action":"click","note":"classification","classification":"business_outcome:MEMBER_NOT_FOUND","timestampMs":1786843218502}

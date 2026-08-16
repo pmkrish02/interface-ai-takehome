@@ -1,0 +1,14 @@
+{"stepIndex":0,"action":"navigate","execSuccess":true,"timestampMs":1786843061853}
+{"stepIndex":0,"action":"navigate","note":"classification","classification":"unclassified","timestampMs":1786843061879}
+{"stepIndex":1,"action":"type","paramRef":"username","tier":"label","execSuccess":true,"timestampMs":1786843062887}
+{"stepIndex":1,"action":"type","note":"classification","classification":"unclassified","timestampMs":1786843062892}
+{"stepIndex":2,"action":"type","paramRef":"password","tier":"label","execSuccess":true,"timestampMs":1786843063915}
+{"stepIndex":2,"action":"type","note":"classification","classification":"unclassified","timestampMs":1786843063918}
+{"stepIndex":3,"action":"click","tier":"role","execSuccess":true,"timestampMs":1786843064966}
+{"stepIndex":3,"action":"click","note":"classification","classification":"unclassified","timestampMs":1786843064977}
+{"stepIndex":4,"action":"type","paramRef":"memberId","tier":"label","execSuccess":true,"timestampMs":1786843065982}
+{"stepIndex":4,"action":"type","note":"classification","classification":"unclassified","timestampMs":1786843065985}
+{"stepIndex":5,"action":"click","tier":"role","execSuccess":true,"timestampMs":1786843067036}
+{"stepIndex":5,"action":"click","note":"classification","classification":"unclassified","timestampMs":1786843067048}
+{"stepIndex":6,"action":"extract","outputRef":"savingsBalance","tier":"label","execSuccess":true,"timestampMs":1786843067052}
+{"stepIndex":6,"action":"extract","note":"classification","classification":"success","timestampMs":1786843067054}

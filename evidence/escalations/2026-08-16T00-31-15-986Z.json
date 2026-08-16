@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-08-16T00:31:15.986Z",
+  "artifact": "look-up-member-12345-and-read-their-savings-balance",
+  "stepIndex": 3,
+  "reason": "Recoverable outcome unresolved after retry at step 3",
+  "expected": "step 3 (click) to succeed",
+  "observed": "Invalid username or password",
+  "url": "http://localhost:3000/login",
+  "screenshotPath": "/Users/muralikrishnaprodduturi/interface-takehome/evidence/escalations/escalation-step3-2026-08-16T00-31-15-918Z.png",
+  "postHandoff": {
+    "url": "http://localhost:3000/login",
+    "a11ySnapshot": {
+      "role": "WebArea",
+      "children": [
+        {
+          "role": "text",
+          "name": "Member Bank — Back Office"
+        },
+        {
+          "role": "text",
+          "name": "Invalid username or password"
+        },
+        {
+          "role": "text",
+          "name": "Username"
+        },
+        {
+          "role": "textbox",
+          "name": "Username"
+        },
+        {
+          "role": "text",
+          "name": "Password"
+        },
+        {
+          "role": "textbox",
+          "name": "Password"
+        },
+        {
+          "role": "button",
+          "name": "Login"
+        }
+      ]
+    }
+  }
+}

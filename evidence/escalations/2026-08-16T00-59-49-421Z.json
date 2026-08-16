@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-16T00:59:49.421Z",
+  "artifact": "look-up-member-12345-and-read-their-savings-balance",
+  "stepIndex": 0,
+  "reason": "Step 0 (navigate) failed to execute: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/\nCall log:\n  \u001b[2m- navigating to \"http://localhost:3000/\", waiting until \"load\"\u001b[22m\n",
+  "expected": "step 0 (navigate to http://localhost:3000) to succeed",
+  "observed": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/\nCall log:\n  \u001b[2m- navigating to \"http://localhost:3000/\", waiting until \"load\"\u001b[22m\n",
+  "url": "chrome-error://chromewebdata/",
+  "screenshotPath": "/Users/muralikrishnaprodduturi/interface-takehome/evidence/escalations/escalation-step0-2026-08-16T00-59-49-332Z.png"
+}
