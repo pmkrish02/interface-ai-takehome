@@ -40,6 +40,10 @@ cd mock-bank && npm install && cd ..
 cd shared    && npm install && npm run build && cd ..
 cd discovery && npm install && cd ..
 cd replay    && npm install && cd ..
+Install the Playwright browser (required for discovery and replay):
+```bash
+cd replay && npx playwright install chromium && cd ..
+```
 ```
 
 Add your Gemini key to a `.env` file at the repo root (kept out of git):
